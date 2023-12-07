@@ -1,6 +1,6 @@
 # An algorithm for finding the distance between the closest
 # pair of points in a set of points. Algorithm is based on
-# Prof. Robbie Webel's lecture on D + C algorithms.
+# Prof. Robbie Weber's lecture on D + C algorithms.
 import math
 import matplotlib.pyplot as plt
 
