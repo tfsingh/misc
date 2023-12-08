@@ -32,8 +32,6 @@ inorder :: Tree a -> [a]
 inorder Empty = undefined
 
 -- N-queens
-data Visited = Visited { columns :: Set Int, diagonals :: Set Int, antidiagonals :: Set Int }
-
 nqueens :: Int -> Int
 nqueens n = undefined
 
