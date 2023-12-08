@@ -60,9 +60,9 @@ nqueens n = nqueens' 0 Visited { columns = Set.empty,
                                                       antidiagonals = Set.insert (row - col) (antidiagonals visited) }
 
 main = do
-    print $ rotate "abcdefgh" 9
-    print $ quicksort "baceadfg"
-    print $ flatten (List [Elem 1, List [Elem 2, List [Elem 3, Elem 4], Elem 5]])
-    print $ sortLength ["abc", "de", "f", "ghi", "jk", "lmnop"]
-    print $ inorder (Branch 4 (Branch 2 (Branch 1 Empty Empty) (Branch 3 Empty Empty)) (Branch 5 Empty Empty))
-    print $ nqueens 8
+    print $ rotate "abcdefgh" 9 -- "bcdefgha"
+    print $ quicksort "baceadfg" -- "aabcdefg"
+    print $ flatten (List [Elem 1, List [Elem 2, List [Elem 3, Elem 4], Elem 5]]) -- [1,2,3,4,5]
+    print $ sortLength ["abc", "de", "f", "ghi", "jk", "lmnop"] -- ["f","de","jk","abc","ghi","lmnop"]
+    print $ inorder (Branch 4 (Branch 2 (Branch 1 Empty Empty) (Branch 3 Empty Empty)) (Branch 5 Empty Empty)) -- [1,2,3,4,5]
+    print $ nqueens 8 -- 92
