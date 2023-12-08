@@ -55,9 +55,9 @@ nqueens n = nqueens' 0 Visited { columns = Set.empty,
             cols = columns visited
             diags = diagonals visited
             adiags = antidiagonals visited
-            updateVisited visited row col = Visited { columns = Set.insert col (columns visited),
-                                                      diagonals = Set.insert (row + col) (diagonals visited), 
-                                                      antidiagonals = Set.insert (row - col) (antidiagonals visited) }
+            updateVisited visited row col = Visited { columns = Set.insert col (cols),
+                                                      diagonals = Set.insert (row + col) (diags), 
+                                                      antidiagonals = Set.insert (row - col) (adiags) }
 
 main = do
     print $ rotate "abcdefgh" 9 -- "bcdefgha"
