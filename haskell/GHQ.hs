@@ -7,7 +7,7 @@ import Data.List (sortBy)
 import Data.Set (Set)
 import qualified Data.Set as Set
 
--- Rotate elements in a list k places to the left
+-- Rotate a list k places left
 rotate :: [a] -> Int -> [a]
 rotate ls k = drop k' ls ++ take k' ls where k' = k `mod` length ls
 
@@ -18,14 +18,14 @@ quicksort (x:xs) = quicksort left ++ [x] ++ quicksort right where
     left = [ele | ele <- xs, ele < x]
     right = [ele | ele <- xs, ele >= x]
 
--- Flatten a list of nested lists
+-- Flatten nested list
 data NestedList a = Elem a | List [NestedList a]
 flatten :: NestedList a -> [a]
 flatten (List []) = []
 flatten (Elem x) = [x]
 flatten (List (x:xs)) = flatten x ++ flatten (List xs)
 
--- Sort a list of lists according to the length of sublists
+--Sort a list of lists by length of sublists
 sortLength :: [[a]] -> [[a]]
 sortLength [] = []
 sortLength ls = sortBy (\x y -> compare (length x) (length y)) ls
@@ -38,7 +38,7 @@ inorder :: Tree a -> [a]
 inorder Empty = []
 inorder (Branch node left right) = inorder left ++ [node] ++ inorder right
 
--- N queens
+-- N-queens
 data Visited = Visited { columns :: Set Int, diagonals :: Set Int, antidiagonals :: Set Int }
 
 nqueens :: Int -> Int
