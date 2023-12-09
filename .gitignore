@@ -1,3 +1,5 @@
+.DS_Store
+*/.DS_Store
 haskell/GHP
 haskell/GHP.hi
 haskell/GHP.o
