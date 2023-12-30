@@ -25,7 +25,7 @@ flatten (List []) = []
 flatten (Elem x) = [x]
 flatten (List (x:xs)) = flatten x ++ flatten (List xs)
 
---Sort a list of lists by length of sublists
+-- Sort a list of lists by length of sublists
 sortLength :: [[a]] -> [[a]]
 sortLength [] = []
 sortLength ls = sortBy (\x y -> compare (length x) (length y)) ls
